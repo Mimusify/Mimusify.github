@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Programacion III</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <style>
+        body { background-color: black;
+        color: white; 
+       }
+        #misdatos {
+            text-align: center;
+			padding-bottom: 40px;
+            padding-top: 10px;
+        }
+        button{background-color: green;
+        color: white;
+        font-size: large};
+
+        
+    </style>
+  </head>
+  <body>
+    <!-- Elementos de HTML-->
+	<div id="misdatos">
+		<h1>My musifi</h1>
+	</div>
+	<hr>
+
+	<div id="misdatos">
+		<button onclick="Dont_stop_me_now()">Dont stop me now</button>
+        <button onclick="Imagine()">Imagine</button>
+        <button onclick="Smells_Like_spirit()">Smells Like spirit</button>
+        <button onclick="StrawBerry_Fields_Forever()">Strawberry fields forever</button>
+        <button onclick="Las_cuatro_de_la_mañana()">Las cuatro de la mañana</button>
+        <button onclick="Paint_In_Black()">Pain In Black</button>
+
+	</div>
+
+	<div class="container">
+		<table id="tabla" data-height="460" data-auto-refresh="true">
+			<thead>
+				<tr>
+					<th data-field="nombreCancion">Nombre de la cancion</th>
+					<th data-field="nombreArtista">Nombre del artista</th>
+					<th data-field="genero">Genero</th>
+                    <th data-field="duracion">Duracion de la cancion</th>
+                    <th data-field="imagenArtista">Imagen del artista</th>
+
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+	<div id="misdatos">
+		<h1>Jose Carlos Gollas Mojarras</h1>    
+		<h1>27/Nov/2024</h1>
+		<h1>Programacion 3</h1>
+		<h1>My musifi</h1>
+        <strong>Datos de contacto</strong>
+        <h1>Nombre completo: Jose Carlos Gollas Mojarras</h1>
+        <h1>Correo electrónico:jose.gollas2520@alumnos.udg.mx</h1>
+        <h1>Nombre preparatoria: Preparatoria sjv</h1> 
+        <h1>Nombre materia: Programación 3</h1>
+        <h1>Nombre del profesor: Angel Emmanuel Sanchez Cuenca</h1> 
+        <h1>Copyright © Todos los derechos reservados</h1>
+
+	</div>
+	
+  </body>
+  <script>
+	/* Javascript */   
+	$(function () {
+		$('#tabla').bootstrapTable({
+			data: datos,
+			formatNoMatches: function () {
+				return 'No hay datos';
+			}
+		});
+	});
+		
+		var datos = [];
+
+		function muestraDatos(){
+			$('#tabla').bootstrapTable('load', datos);
+		}
+
+	// Aqui abajo agrega tus funciones
+	function Dont_stop_me_now() {
+        var cancion= {
+            nombreCancion: "Don't Stop Me Now",
+            nombreArtista: "Queen",
+            genero: "Rock",
+            duracion: "3:29",
+            imagenArtista: "<img src='https://th.bing.com/th/id/R.a9ebd02cf7fbf4b86b62e5b1f0fbebb5?rik=DtyOYD3F0D%2bUzA&riu=http%3a%2f%2fwww.capital.cl%2fwp-content%2fuploads%2f2014%2f04%2ffoto-google_queen.jpg&ehk=8RObcOEmkAlTziCCnOsNLWAGHU3scoCvpY0XHUmTqj4%3d&risl=&pid=ImgRaw&r=0' width='350px' height='300px'>"
+        };
+        datos.push(cancion);
+        muestraDatos();
+    }
+
+    function Imagine() {
+        var cancion = {
+            nombreCancion: "Imagine",
+            nombreArtista: "John Lennon",
+            genero: "Pop",
+            duracion: "3:01",
+            imagenArtista: "<img src='https://http2.mlstatic.com/D_NQ_NP_798216-MLM48785964214_012022-O.webp' width='200px' height='300px'>"
+        };
+        datos.push(cancion);
+        muestraDatos();
+    }
+
+    function Smells_Like_spirit() {
+        var cancion = {
+            nombreCancion: "Smells Like Teen Spirit",
+            nombreArtista: "Nirvana",
+            genero: "Rock",
+            duracion: "5:01",
+            imagenArtista: "<img src='https://wallpapers.com/images/hd/nirvana-cute-smiley-face-logo-wcpjre505vl59c1p.jpg' width='250px' height='150px'>"
+        };
+        datos.push(cancion);
+        muestraDatos();
+    }
+    function StrawBerry_Fields_Forever() {
+        var cancion = {
+            nombreCancion: "Strawberry Fields Forever",
+            nombreArtista: "The Beatles",
+            genero: "Rock Psicodelico",
+            duracion: "4:05",
+            imagenArtista: "<img src='https://www.rollingstone.com/wp-content/uploads/2024/11/beatles-1964-mono.jpg?w=1581&h=1054&crop=1' width='250px' height='200px'>"
+        };
+        datos.push(cancion);
+        muestraDatos();
+    }
+
+    function Las_cuatro_de_la_mañana() {
+        var cancion = {
+            nombreCancion: "Las cuatro de la mañana",
+            nombreArtista: "El viejo Paulino",
+            genero: "Corridos",
+            duracion: "2:46",
+            imagenArtista: "<img src='https://64.media.tumblr.com/tumblr_m08t55pBgN1rqw1wto1_400.jpg' width='250px' height='300px'>"
+        };
+        datos.push(cancion);
+        muestraDatos();
+    }
+
+    function Paint_In_Black   () {
+        var cancion = {
+            nombreCancion: "Paint in black",
+            nombreArtista: "The rolling stone",
+            genero: "Rock",
+            duracion: "3:58",
+            imagenArtista: "<img src='https://letemps-17455.kxcdn.com/photos/5b2f0dd4-0ea4-435f-9b4f-84101df1de1e/small' width='240px' height='170px'>"
+        };
+        datos.push(cancion);
+        muestraDatos();
+    }
+  </script>
+</html>
